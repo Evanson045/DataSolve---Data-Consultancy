@@ -1,52 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>DataSolve Consultancy | Data Analytics & Web Solutions</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
-<body>
-  <!-- Header with navigation -->
-  <header>
-    <nav>
-      <div class="nav-container">
-        <!-- Logo + Title -->
-        <div class="logo-title">
-          <img src="{{ url_for('static', filename='logo.png') }}" alt="DSE datasolve" class="logo">
-          <span class="site-title">DataSolve Consultancy</span>
-        </div>
+<nav>
+  <div class="nav-container">
+    <div class="logo-title">
+      <img src="{{ url_for('static', filename='logo.png') }}" alt="DataSolve Logo" class="logo">
+      <span class="site-title">DataSolve Consultancy</span>
+    </div>
 
-        <!-- Hamburger button -->
-        <button class="hamburger" aria-label="Toggle navigation" onclick="toggleMenu()">☰</button>
+    <!-- Hamburger button -->
+    <button class="hamburger" aria-label="Toggle navigation" onclick="toggleMenu()">☰</button>
 
-        <!-- Navigation links -->
-        <ul id="nav-links">
-          <li><a href="{{ url_for('home') }}">Home</a></li>
-          <li><a href="{{ url_for('services') }}">Our Services</a></li>
-          <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
-          <li><a href="{{ url_for('feedback') }}">Your Feedback</a></li>
-        </ul>
-      </div>
-    </nav>
-  </header>
-
-  <!-- Page-specific content -->
-  <main>
-    {% block content %}{% endblock %}
-  </main>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; {{ current_year }} DataSolve Consultancy. All rights reserved.</p>
-  </footer>
-
-  <!-- JS toggle -->
-  <script>
-    function toggleMenu() {
-      const navLinks = document.getElementById("nav-links");
-      navLinks.classList.toggle("show");
-    }
-  </script>
-</body>
-</html>
+    <!-- Navigation links -->
+    <ul id="nav-links">
+      <li><a href="{{ url_for('home') }}">Home</a></li>
+      <li><a href="{{ url_for('services') }}">Our Services</a></li>
+      <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+      <li><a href="{{ url_for('feedback') }}">Your Feedback</a></li>
+    </ul>
+  </div>
+</nav>
