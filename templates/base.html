@@ -1,19 +1,42 @@
-<nav>
-  <div class="nav-container">
-    <div class="logo-title">
-      <img src="{{ url_for('static', filename='logo.png') }}" alt="DataSolve Logo" class="logo">
-      <span class="site-title">DataSolve Consultancy</span>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>DataSolve Consultancy | Data Analytics & Web Solutions</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <div class="logo-title">
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="DataSolve Logo" class="logo">
+        <span class="site-title">DataSolve Consultancy</span>
+      </div>
+
+      <!-- Hamburger button -->
+      <button class="hamburger" onclick="toggleMenu()">☰</button>
+
+      <!-- Navigation links -->
+      <ul id="nav-links">
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="{{ url_for('services') }}">Services</a></li>
+        <li><a href="{{ url_for('contact') }}">Contact</a></li>
+        <li><a href="{{ url_for('feedback') }}">Feedback</a></li>
+      </ul>
     </div>
+  </nav>
 
-    <!-- Hamburger button -->
-    <button class="hamburger" aria-label="Toggle navigation" onclick="toggleMenu()">☰</button>
+  <!-- Page-specific content -->
+  {% block content %}{% endblock %}
 
-    <!-- Navigation links -->
-    <ul id="nav-links">
-      <li><a href="{{ url_for('home') }}">Home</a></li>
-      <li><a href="{{ url_for('services') }}">Our Services</a></li>
-      <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
-      <li><a href="{{ url_for('feedback') }}">Your Feedback</a></li>
-    </ul>
-  </div>
-</nav>
+  <!-- JS toggle -->
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById("nav-links");
+      navLinks.classList.toggle("show");
+    }
+  </script>
+</body>
+</html>
