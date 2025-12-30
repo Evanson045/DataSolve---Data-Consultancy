@@ -1,65 +1,97 @@
+/* 🌍 Global styles */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
     color: #0a0613;
+    line-height: 1.6;
+    background-color: #f9f9f9;
 }
 
-/* Top section: Title + Logo */
+/* 🔝 Top section: Title + Logo */
 .top-section {
     background-color: #1e627a; /* Dark navy */
     color: #ffffff;
-    padding: 40px 0;
+    padding: 30px 20px;
     text-align: center;
 }
 
-/* Bottom section: Content */
-.bottom-section {
-    background-color: #cddde6; /* Light blue-gray */
-    padding: 40px 0;
-}
-
-.container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
 .logo {
-    max-width: 220px;
-    margin-bottom: 20px;
+    max-width: 160px;
+    margin-bottom: 15px;
 }
 
 .main-title {
-    font-size: 36px;
+    font-size: 2rem;
     color: #c9d6e7;
     margin-bottom: 10px;
 }
 
 .tagline {
-    font-size: 20px;
+    font-size: 1.2rem;
     color: #cfd5f1;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
+/* 🔽 Bottom section: Content */
+.bottom-section {
+    background-color: #cddde6; /* Light blue-gray */
+    padding: 30px 15px;
+}
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* 📌 Navigation bar */
 nav {
-    margin: 25px 0;
+    background: #004466;
+    padding: 10px;
 }
 
-nav a {
-    margin: 0 15px;
-    color: #080c46;
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+    transition: max-height 0.3s ease-in-out; /* smooth toggle */
+    overflow: hidden;
+}
+
+nav ul li a {
+    color: #ffffff;
     text-decoration: none;
     font-weight: bold;
 }
 
-nav a:hover {
+nav ul li a:hover {
     text-decoration: underline;
 }
 
+/* 🍔 Hamburger button */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* 📖 Section titles */
 .about-title {
     color: #1e627a;
-    font-size: 28px;
+    font-size: 1.6rem;
     margin-bottom: 20px;
     text-align: center;
 }
@@ -76,10 +108,9 @@ nav a:hover {
 
 .about-block p {
     text-align: justify;
-    line-height: 1.6;
 }
 
-/* Services alignment */
+/* 🛠 Services */
 .services-section {
     text-align: center;
 }
@@ -93,16 +124,14 @@ nav a:hover {
 }
 
 .services-list li {
-    font-size: 18px;
+    font-size: 1rem;
     margin: 15px 0;
-    line-height: 1.6;
 }
 
-/* Contact alignment */
+/* 📬 Contact */
 .contact-section {
     text-align: center;
-    font-size: 18px;
-    line-height: 1.6;
+    font-size: 1rem;
 }
 
 .email-link {
@@ -115,10 +144,10 @@ nav a:hover {
     text-decoration: underline;
 }
 
+/* 📝 Feedback */
 .feedback-section {
     text-align: center;
-    font-size: 18px;
-    line-height: 1.6;
+    font-size: 1rem;
 }
 
 .feedback-section form {
@@ -127,12 +156,14 @@ nav a:hover {
 
 .feedback-section input, 
 .feedback-section textarea {
-    width: 80%;
+    width: 100%;
+    max-width: 500px;
     padding: 10px;
-    margin: 10px 0;
+    margin: 10px auto;
     border: 1px solid #4b1fb3;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 1rem;
+    display: block;
 }
 
 .feedback-section button {
@@ -141,83 +172,71 @@ nav a:hover {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 1rem;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .feedback-section button:hover {
     background-color: #3498db;
 }
 
-/* Base styles */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+/* ✅ Success message */
+.success-message {
+    color: green;
+    font-weight: bold;
+    margin-top: 15px;
 }
 
-/* Container that adapts */
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-}
-
-/* Navigation bar */
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #004466;
-  padding: 10px;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
-}
-
-/* Responsive images */
+/* 🖼 Responsive images */
 img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Headings */
-h1, h2, h3 {
-  color: #004466;
-}
-
-/* Buttons */
-button {
-  padding: 10px 20px;
-  border: none;
-  background: #0077aa;
-  color: white;
-  cursor: pointer;
-}
-button:hover {
-  background: #005577;
+    max-width: 100%;
+    height: auto;
 }
 
 /* 📱 Mobile adjustments */
 @media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-  }
+    .main-title {
+        font-size: 1.6rem;
+    }
 
-  .container {
-    width: 95%;
-  }
+    .tagline {
+        font-size: 1rem;
+    }
 
-  h1 {
-    font-size: 1.8rem;
-  }
+    /* Hamburger visible */
+    .hamburger {
+        display: block;
+    }
+
+    /* Hide nav links until toggled */
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background: #004466;
+        padding: 10px;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .services-list {
+        text-align: center;
+    }
+
+    .feedback-section input, 
+    .feedback-section textarea {
+        width: 90%;
+    }
 }

@@ -4,21 +4,50 @@
   <title>DataSolve Consultancy | Data Analytics & Web Solutions</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="DataSolve Consultancy provides modular analytics, web solutions, and branding strategies.">
+  <!-- Link to CSS -->
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-  <!-- Shared navigation bar -->
-  <nav>
-    <ul>
-      <li><a href="{{ url_for('home') }}">Home</a></li>
-      <li><a href="{{ url_for('services') }}">Services</a></li>
-      <li><a href="{{ url_for('contact') }}">Contact</a></li>
-      <li><a href="{{ url_for('feedback') }}">Feedback</a></li>
-    </ul>
-  </nav>
+  <!-- Header with navigation -->
+  <header>
+    <nav>
+      <div class="nav-container">
+        <!-- Logo + Title -->
+        <div class="logo-title">
+          <img src="{{ url_for('static', filename='logo.png') }}" alt="DataSolve Logo" class="logo">
+          <span class="site-title">DataSolve Consultancy</span>
+        </div>
+
+        <!-- Hamburger button (accessible) -->
+        <button class="hamburger" aria-label="Toggle navigation" onclick="toggleMenu()">☰</button>
+
+        <!-- Navigation links -->
+        <ul id="nav-links">
+          <li><a href="{{ url_for('home') }}">Home</a></li>
+          <li><a href="{{ url_for('services') }}">Services</a></li>
+          <li><a href="{{ url_for('contact') }}">Contact</a></li>
+          <li><a href="{{ url_for('feedback') }}">Feedback</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
 
   <!-- Page-specific content -->
-  {% block content %}{% endblock %}
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; {{ current_year }} DataSolve Consultancy. All rights reserved.</p>
+  </footer>
+
+  <!-- JS toggle -->
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById("nav-links");
+      navLinks.classList.toggle("show");
+    }
+  </script>
 </body>
 </html>
