@@ -12,20 +12,11 @@
   <!-- Bottom Section -->
   <div class="bottom-section">
     <div class="container contact-section">
-      <!-- Email link -->
       <p>Email address: 
         <a href="mailto:datasolveke@gmail.com" class="email-link">
           datasolveke@gmail.com
         </a>
       </p>
-
-      <!-- Contact form -->
-      <form method="post" action="{{ url_for('contact') }}">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-        <button type="submit">Send</button>
-      </form>
     </div>
   </div>
 {% endblock %}
