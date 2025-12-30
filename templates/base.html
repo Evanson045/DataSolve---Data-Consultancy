@@ -4,7 +4,6 @@
   <title>DataSolve Consultancy | Data Analytics & Web Solutions</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Link to CSS -->
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
@@ -12,13 +11,9 @@
   <header>
     <nav>
       <div class="nav-container">
-        <!-- Logo + Title -->
-        <div class="logo-title">
-          <img src="{{ url_for('static', filename='logo.png') }}" alt="DataSolve Logo" class="logo">
-          <span class="site-title">DataSolve Consultancy</span>
-        </div>
+        <!-- Empty strip: no logo or title -->
 
-        <!-- Hamburger button (accessible) -->
+        <!-- Hamburger button -->
         <button class="hamburger" aria-label="Toggle navigation" onclick="toggleMenu()">☰</button>
 
         <!-- Navigation links -->
@@ -26,7 +21,7 @@
           <li><a href="{{ url_for('home') }}">Home</a></li>
           <li><a href="{{ url_for('services') }}">Our Services</a></li>
           <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
-          <li><a href="{{ url_for('feedback') }}">Your feedback</a></li>
+          <li><a href="{{ url_for('feedback') }}">Your Feedback</a></li>
         </ul>
       </div>
     </nav>

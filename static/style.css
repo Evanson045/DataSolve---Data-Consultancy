@@ -1,70 +1,27 @@
-/* 🌍 Global styles */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #0a0613;
-    line-height: 1.6;
-    background-color: #f9f9f9;
-}
-
-/* 🔝 Top section: Title + Logo */
-.top-section {
-    background-color: #1e627a; /* Dark navy */
-    color: #ffffff;
-    padding: 30px 20px;
-    text-align: center;
-}
-
-.logo {
-    max-width: 160px;
-    margin-bottom: 15px;
-}
-
-.main-title {
-    font-size: 2rem;
-    color: #c9d6e7;
-    margin-bottom: 10px;
-}
-
-.tagline {
-    font-size: 1.2rem;
-    color: #cfd5f1;
-    margin-bottom: 20px;
-}
-
-/* 🔽 Bottom section: Content */
-.bottom-section {
-    background-color: #cddde6; /* Light blue-gray */
-    padding: 30px 15px;
-}
-
-.container {
-    width: 90%;
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
 /* 📌 Navigation bar */
 nav {
-    background: #004466;
-    padding: 10px;
+    background: #004466;   /* Dark blue background */
+    padding: 0;            /* Remove extra padding so height is consistent */
 }
 
+/* Ensure strip is always visible */
 .nav-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end; /* Push hamburger/menu to the right */
     align-items: center;
+    min-height: 50px;          /* Fixed height for visibility */
+    padding: 0 15px;           /* Side padding */
+    background-color: #004466; /* Same background as nav */
 }
 
+/* Navigation links */
 nav ul {
     list-style: none;
     display: flex;
     gap: 15px;
     margin: 0;
     padding: 0;
-    transition: max-height 0.3s ease-in-out; /* smooth toggle */
+    transition: max-height 0.3s ease-in-out;
     overflow: hidden;
 }
 
@@ -86,157 +43,4 @@ nav ul li a:hover {
     border: none;
     color: white;
     cursor: pointer;
-}
-
-/* 📖 Section titles */
-.about-title {
-    color: #1e627a;
-    font-size: 1.6rem;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.about-block {
-    margin-bottom: 25px;
-}
-
-.about-block h3 {
-    color: #000000;
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.about-block p {
-    text-align: justify;
-}
-
-/* 🛠 Services */
-.services-section {
-    text-align: center;
-}
-
-.services-list {
-    list-style-type: none;
-    padding: 0;
-    margin: 20px auto;
-    max-width: 700px;
-    text-align: left;
-}
-
-.services-list li {
-    font-size: 1rem;
-    margin: 15px 0;
-}
-
-/* 📬 Contact */
-.contact-section {
-    text-align: center;
-    font-size: 1rem;
-}
-
-.email-link {
-    color: #182196;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.email-link:hover {
-    text-decoration: underline;
-}
-
-/* 📝 Feedback */
-.feedback-section {
-    text-align: center;
-    font-size: 1rem;
-}
-
-.feedback-section form {
-    margin-top: 20px;
-}
-
-.feedback-section input, 
-.feedback-section textarea {
-    width: 100%;
-    max-width: 500px;
-    padding: 10px;
-    margin: 10px auto;
-    border: 1px solid #4b1fb3;
-    border-radius: 5px;
-    font-size: 1rem;
-    display: block;
-}
-
-.feedback-section button {
-    background-color: #1b0e57;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.feedback-section button:hover {
-    background-color: #3498db;
-}
-
-/* ✅ Success message */
-.success-message {
-    color: green;
-    font-weight: bold;
-    margin-top: 15px;
-}
-
-/* 🖼 Responsive images */
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* 📱 Mobile adjustments */
-@media (max-width: 768px) {
-    .main-title {
-        font-size: 1.6rem;
-    }
-
-    .tagline {
-        font-size: 1rem;
-    }
-
-    /* Hamburger visible */
-    .hamburger {
-        display: block;
-    }
-
-    /* Hide nav links until toggled */
-    nav ul {
-        display: none;
-        flex-direction: column;
-        background: #004466;
-        padding: 10px;
-    }
-
-    nav ul.show {
-        display: flex;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-        text-align: center;
-    }
-
-    .container {
-        width: 95%;
-        padding: 10px;
-    }
-
-    .services-list {
-        text-align: center;
-    }
-
-    .feedback-section input, 
-    .feedback-section textarea {
-        width: 90%;
-    }
 }
