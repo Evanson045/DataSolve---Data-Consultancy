@@ -1,0 +1,150 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #0a0613;
+}
+
+/* Top section: Title + Logo */
+.top-section {
+    background-color: #1e627a; /* Dark navy */
+    color: #ffffff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+/* Bottom section: Content */
+.bottom-section {
+    background-color: #cddde6; /* Light blue-gray */
+    padding: 40px 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.logo {
+    max-width: 220px;
+    margin-bottom: 20px;
+}
+
+.main-title {
+    font-size: 36px;
+    color: #c9d6e7;
+    margin-bottom: 10px;
+}
+
+.tagline {
+    font-size: 20px;
+    color: #cfd5f1;
+    margin-bottom: 30px;
+}
+
+nav {
+    margin: 25px 0;
+}
+
+nav a {
+    margin: 0 15px;
+    color: #080c46;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.about-title {
+    color: #1e627a;
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.about-block {
+    margin-bottom: 25px;
+}
+
+.about-block h3 {
+    color: #000000;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.about-block p {
+    text-align: justify;
+    line-height: 1.6;
+}
+
+/* Services alignment */
+.services-section {
+    text-align: center;
+}
+
+.services-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px auto;
+    max-width: 700px;
+    text-align: left;
+}
+
+.services-list li {
+    font-size: 18px;
+    margin: 15px 0;
+    line-height: 1.6;
+}
+
+/* Contact alignment */
+.contact-section {
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.email-link {
+    color: #182196;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.email-link:hover {
+    text-decoration: underline;
+}
+
+.feedback-section {
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.feedback-section form {
+    margin-top: 20px;
+}
+
+.feedback-section input, 
+.feedback-section textarea {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #4b1fb3;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.feedback-section button {
+    background-color: #1b0e57;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.feedback-section button:hover {
+    background-color: #3498db;
+}
