@@ -38,3 +38,17 @@
     </div>
 </body>
 </html>
+
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Feedback</h1>
+  <p>Your thoughts help us improve DataSolve. Please share your feedback below:</p>
+
+  <form method="post" action="{{ url_for('feedback') }}">
+    <label for="feedback">Feedback:</label><br>
+    <textarea id="feedback" name="feedback" rows="5" required></textarea><br><br>
+
+    <button type="submit">Submit</button>
+  </form>
+{% endblock %}
