@@ -11,7 +11,11 @@
   <header>
     <nav>
       <div class="nav-container">
-        <!-- Empty strip: no logo or title -->
+        <!-- Logo + Title -->
+        <div class="logo-title">
+          <img src="{{ url_for('static', filename='logo.png') }}" alt="DSE datasolve" class="logo">
+          <span class="site-title">DataSolve Consultancy</span>
+        </div>
 
         <!-- Hamburger button -->
         <button class="hamburger" aria-label="Toggle navigation" onclick="toggleMenu()">☰</button>
