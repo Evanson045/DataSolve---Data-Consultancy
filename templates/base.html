@@ -10,17 +10,14 @@
   <!-- Navigation -->
   <nav>
     <div class="nav-container">
-      <!-- Removed logo + site title -->
-
       <!-- Hamburger button -->
       <button class="hamburger" onclick="toggleMenu()">☰</button>
 
       <!-- Navigation links -->
       <ul id="nav-links">
-        <li><a href="{{ url_for('home') }}">Home</a></li>
-        <li><a href="{{ url_for('services') }}">Our Services</a></li>
-        <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
-        <!-- Feedback link removed -->
+        <li><a href="{{ url_for('home') }}" class="{% if current_page == 'home' %}active{% endif %}">Home</a></li>
+        <li><a href="{{ url_for('services') }}" class="{% if current_page == 'services' %}active{% endif %}">Our Services</a></li>
+        <li><a href="{{ url_for('contact') }}" class="{% if current_page == 'contact' %}active{% endif %}">Contact Us</a></li>
       </ul>
     </div>
   </nav>
