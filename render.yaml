@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: datasolve-app
+    env: python
+    buildCommand: ""
+    startCommand: python homepage.py
