@@ -27,32 +27,7 @@ def services():
 def contact():
     return render_template("contact.html", current_page="contact")
 
-@app.route("/feedback", methods=["GET", "POST"])
-def feedback():
-    if request.method == "POST":
-        user_name = request.form.get("name")
-        user_feedback = request.form.get("feedback")
-
-        msg = Message(
-            subject=f"New Feedback from {user_name}",
-            recipients=["datasolveke@gmail.com"]  # sender auto‑set from MAIL_DEFAULT_SENDER
-        )
-        msg.body = f"""
-        You have new feedback:
-
-        Name: {user_name}
-        Feedback: {user_feedback}
-        """
-
-        try:
-            mail.send(msg)
-            flash("✅ Feedback sent successfully!", "success")
-        except Exception as e:
-            flash(f"❌ Error sending feedback: {e}", "danger")
-
-        return redirect(url_for("feedback"))
-
-    return render_template("feedback.html", current_page="feedback")
+# 🚫 Feedback route removed
 
 if __name__ == "__main__":
     # Debugging: confirm mail config values before running
