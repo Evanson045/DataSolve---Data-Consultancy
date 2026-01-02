@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: datasolve-app
+    name: DataSolve---Data-Consultancy
     env: python
     buildCommand: ""
     startCommand: python homepage.py
