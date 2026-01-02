@@ -14,8 +14,6 @@ def services():
 def contact():
     return render_template("contact.html", current_page="contact")
 
-# ✅ Feedback route removed
-
 if __name__ == "__main__":
     # Use host=0.0.0.0 for deployment, debug=False for production
     app.run(host="0.0.0.0", port=5000, debug=False)
