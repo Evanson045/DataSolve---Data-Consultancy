@@ -1,6 +1,19 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for, flash
+from flask_mail import Mail, Message
+import os
 
 app = Flask(__name__)
+app.secret_key = os.environ.get("SECRET_KEY", "change-this-in-prod")
+
+# --- Mail configuration ---
+app.config["MAIL_SERVER"] = "smtp.gmail.com"
+app.config["MAIL_PORT"] = 587
+app.config["MAIL_USE_TLS"] = True
+app.config["MAIL_USERNAME"] = os.environ.get("MAIL_USERNAME") or "datasolveke@gmail.com"
+app.config["MAIL_PASSWORD"] = os.environ.get("MAIL_PASSWORD")  # Gmail App Password
+app.config["MAIL_DEFAULT_SENDER"] = app.config["MAIL_USERNAME"]  # ✅ Default sender
+
+mail = Mail(app)
 
 @app.route("/")
 def home():
@@ -19,11 +32,30 @@ def feedback():
     if request.method == "POST":
         user_name = request.form.get("name")
         user_feedback = request.form.get("feedback")
-        # For now, just print feedback to console (later save to DB/file)
-        print(f"Feedback from {user_name}: {user_feedback}")
-        return render_template("feedback.html", current_page="feedback", success=True)
+
+        msg = Message(
+            subject=f"New Feedback from {user_name}",
+            recipients=["datasolveke@gmail.com"]  # sender auto‑set from MAIL_DEFAULT_SENDER
+        )
+        msg.body = f"""
+        You have new feedback:
+
+        Name: {user_name}
+        Feedback: {user_feedback}
+        """
+
+        try:
+            mail.send(msg)
+            flash("✅ Feedback sent successfully!", "success")
+        except Exception as e:
+            flash(f"❌ Error sending feedback: {e}", "danger")
+
+        return redirect(url_for("feedback"))
+
     return render_template("feedback.html", current_page="feedback")
 
 if __name__ == "__main__":
-    # Use host=0.0.0.0 for deployment, debug=False for production
-    app.run(host="0.0.0.0", port=5000, debug=False)
+    # Debugging: confirm mail config values before running
+    print("MAIL_USERNAME:", app.config["MAIL_USERNAME"])
+    print("MAIL_DEFAULT_SENDER:", app.config["MAIL_DEFAULT_SENDER"])
+    app.run(host="0.0.0.0", port=5000, debug=True)
