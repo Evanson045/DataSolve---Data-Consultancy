@@ -112,20 +112,20 @@ img:hover { transform: scale(1.02); }
 
 /* 🎨 Portfolio */
 .portfolio-section {
-  background: #d6e1e9; /* Grey background */
-  color: #0a0613;      /* Dark text for section headings */
+  background: #d6e1e9 !important; /* Force white background */
+  color: #0a0613;
   padding: 70px 20px;
 }
 
-.portfolio-item {
+.portfolio-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
 
 .portfolio-item {
-  background: #012c3d; /*blue boxes */
-  color: #ffffff; /* White text inside boxes */
+  background: #012c3d; /* Dark blue boxes */
+  color: #d6e1e9;
   padding: 30px;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.15);
@@ -136,8 +136,9 @@ img:hover { transform: scale(1.02); }
 .portfolio-item:hover {
   transform: translateY(-6px);
   box-shadow: 0 8px 16px rgba(0,0,0,0.25);
-  background: #5bbce6; /* Slightly darker sky blue on hover */
+  background: #5bbce6;
 }
+
 
 /* 💬 Testimonials */
 .testimonials-section { background: #d6e1e9; padding: 70px 20px; text-align: center; }
