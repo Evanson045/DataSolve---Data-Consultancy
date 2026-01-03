@@ -112,7 +112,7 @@ img:hover { transform: scale(1.02); }
 
 /* 🎨 Portfolio */
 .portfolio-section {
-  background: #d6e1e9 !important; /* Force white background */
+  background: #ffffff !important; /* White background */
   color: #0a0613;
   padding: 70px 20px;
 }
@@ -124,19 +124,19 @@ img:hover { transform: scale(1.02); }
 }
 
 .portfolio-item {
-  background: #0a0613; /* Dark blue boxes */
+  background: #03172b !important; /* Force dark navy boxes */
   color: #d6e1e9;
   padding: 30px;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-  transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
   text-align: center;
 }
 
 .portfolio-item:hover {
   transform: translateY(-6px);
   box-shadow: 0 8px 16px rgba(0,0,0,0.25);
-  background: #5bbce6;
+  background: #03172b !important; /* Keep navy even on hover */
 }
 
 /* 💬 Testimonials */
@@ -418,7 +418,7 @@ img:hover { transform: scale(1.02); }
 
 /* 📬 Contact Strip */
 .contact-strip {
-  background: #0a0613; /* Navy Blue */
+  background: #001f3f; /* Navy Blue */
   color: #fafbfc;
   padding: 50px 20px;
   text-align: center;
@@ -430,12 +430,11 @@ img:hover { transform: scale(1.02); }
   text-decoration: none;
   transition: color 0.3s;
 }
-.contact-strip a:hover { color: #1e627a; text-decoration: underline; }
+.contact-strip a:hover { color: #12c5dd; text-decoration: underline; }
 
 /* 🔗 Social Links */
 .social-links a { color: #ffffff; margin: 0 10px; transition: color 0.3s; }
-.social-links a:hover { color: #1e627a; }
-
+.social-links a:hover { color: #12c5dd; }
 /* 📱 Responsive */
 @media (max-width: 768px) {
   .main-title { font-size: 2rem; }
