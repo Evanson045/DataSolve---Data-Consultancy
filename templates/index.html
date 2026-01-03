@@ -1,34 +1,144 @@
 {% extends "base.html" %}
-
 {% block content %}
-  <!-- Top Section -->
+
+<!-- Navigation -->
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="#hero" class="nav-logo">DataSolve</a>
+    <!-- Hamburger button -->
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+    <!-- Navigation menu -->
+    <ul id="nav-menu">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#services">Our Services</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#team">Our Team</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#newsletter">Newsletter</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<!-- Hero -->
+<section id="hero" class="hero-section">
+  <div class="container text-center">
+    <img src="{{ url_for('static', filename='datasolve_logo.png') }}" alt="DataSolve Logo" class="logo">
+    <h1 class="main-title">DataSolve – Data Consultancy</h1>
+    <p class="tagline">Shaping tomorrow using data today!</p>
+    <a href="#contact" class="cta-button">Work With Us</a>
+  </div>
+</section>
+
+<!-- About Us -->
+<section id="about" class="about-section">
+  <div class="container grid-3">
+    <div>
+      <h3>Who We Are</h3>
+      <p>We empower businesses and learners to transform raw data into actionable insights.</p>
+    </div>
+    <div>
+      <h3>What We Do</h3>
+      <p>Modular analytics, workflow optimization, and scalable web development solutions.</p>
+    </div>
+    <div>
+      <h3>Our Strategy</h3>
+      <p>Clarity, reproducibility, and impact — ensuring sustainable growth for clients.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Our Services -->
+<section id="services" class="services-section">
   <div class="top-section">
-    <div class="container">
-      <img src="{{ url_for('static', filename='datasolve_logo.png') }}" alt="DataSolve Logo" class="logo">
-      <h1 class="main-title">DataSolve - Data Consultancy</h1>
-      <p class="tagline">Shaping tomorrow using data today!</p>
+    <div class="container text-center">
+      <h1 class="main-title">Our Services</h1>
+      <p class="tagline">Delivering clarity, reproducibility, and impact through data-driven solutions.</p>
     </div>
   </div>
 
-  <!-- Bottom Section -->
   <div class="bottom-section">
-    <div class="container about-section">
-      <h2 class="about-title">About Us</h2>
-
-      <div class="about-block">
-        <h3>Who We Are</h3>
-        <p>DataSolve is a hub for analytics, education, and scalable solutions. We empower businesses and learners to transform raw data into actionable insights, combining technical expertise with clarity and creativity.</p>
-      </div>
-
-      <div class="about-block">
-        <h3>What We Do</h3>
-        <p>We specialize in modular analytics, workflow optimization, and web development. Our solutions are designed to be reproducible, accessible, and impactful — helping clients make informed decisions and scale effectively.</p>
-      </div>
-
-      <div class="about-block">
-        <h3>Our Strategy</h3>
-        <p>Our strategy is built on three pillars: clarity, reproducibility, and impact. We document every workflow, teach through real-world examples, and design systems that adapt to client needs. This ensures long-term value and sustainable growth.</p>
-      </div>
+    <div class="container services-section">
+      <h2 class="about-title">What we do at DataSolve</h2>
+      <ul class="services-list">
+        <li><strong>Data Analytics & Consulting:</strong> Cleaning, transformation, visualization, and statistical analysis to uncover insights.</li>
+        <li><strong>Educational Content:</strong> Tutorials, workshops, and narration-ready modules to teach analytics and technical concepts clearly.</li>
+        <li><strong>Workflow Optimization:</strong> Designing reproducible workflows, reporting, and client-centered intake systems.</li>
+        <li><strong>Web Development:</strong> Building scalable websites, dashboards, and client interfaces.</li>
+        <li><strong>Branding & Marketing:</strong> Minimalist ad design, web design, and data-driven content strategies.</li>
+      </ul>
     </div>
   </div>
+</section>
+
+<!-- Portfolio -->
+<section id="portfolio" class="portfolio-section">
+  <div class="container grid-3">
+    <div class="portfolio-item">Dashboard Example</div>
+    <div class="portfolio-item">Analytics Report Example</div>
+    <div class="portfolio-item">Web Solutions Example</div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section id="testimonials" class="testimonials-section">
+  <div class="container">
+    <blockquote>
+      “DataSolve has made me better understand and comprehend the use of R studio. Through the in-person and online sessions, I have come to become more comfortable with the use of R due to DataSolve's simplified and useful teaching. Would highly recommend DataSolve to both beginners and skilled users of R, as they will benefit from the lessons..”
+      - Chantal Ciera.
+    </blockquote>
+</section>
+
+<!-- Our Team -->
+<section id="team" class="team-section">
+  <div class="container text-center">
+    <img src="{{ url_for('static', filename='founder.png') }}" 
+         alt="Founder Photo" 
+         class="team-photo">
+    <h3>Evanson – Founder</h3>
+    <p>Passionate about clarity, reproducibility, and impact in data solutions.</p>
+    <a href="https://www.linkedin.com/in/mwangievanson?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BZcQ3WsfNQ7%2BPTNEaKfPABg%3D%3D" target="_blank" class="cta-button">
+      Connect on LinkedIn
+    </a>
+  </div>
+</section>
+
+
+<!-- FAQ -->
+<section id="faq" class="faq-section">
+  <div class="container">
+    <h2 class="section-title">FAQ</h2>
+    <div class="faq-item"><strong>i. What industries do you serve?</strong><br>
+    </strong> Finance, education, and tech startups.</div>
+    <div class="faq-item"><strong>ii. Do you offer training?</strong><br>
+    </strong> Yes, modular tutorials and workshops.</div>
+  </div>
+</section>
+
+<!-- Newsletter -->
+<section id="newsletter" class="newsletter-section">
+  <div class="container text-center">
+    <h2 class="section-title">Get newsletters</h2>
+    <form>
+      <input type="email" placeholder="Enter your email" required>
+      <button type="submit" class="cta-button">Subscribe</button>
+    </form>
+    <p>No spam. Just insights.</p>
+  </div>
+</section>
+
+<!-- Contact Us -->
+<section id="contact" class="contact-strip">
+  <div class="container text-center">
+    <h2>Contact Us</h2>
+    <p><a href="mailto:datasolveke@gmail.com" class="email-link">Email</a></p>
+    <p><a href="https://wa.me/254726572187" target="_blank" class="email-link">WhatsApp</a></p>
+    <div class="social-links">
+      <a href="linkedin.com/in/mwangievanson" target="_blank">LinkedIn</a>
+    </div>
+  </div>
+</section>
+
 {% endblock %}
