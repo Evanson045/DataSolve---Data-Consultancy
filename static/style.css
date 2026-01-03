@@ -124,7 +124,7 @@ img:hover { transform: scale(1.02); }
 }
 
 .portfolio-item {
-  background: #012c3d; /* Dark blue boxes */
+  background: #0a0613; /* Dark blue boxes */
   color: #d6e1e9;
   padding: 30px;
   border-radius: 8px;
@@ -363,7 +363,7 @@ img:hover { transform: scale(1.02); }
   gap: 20px;
 }
 .portfolio-item {
-  background: #008080; /* Navy blue boxes */
+  background: #1e627a; /* Navy blue boxes */
   color: #d6e1e9;      /* Light text inside boxes */
   padding: 30px;
   border-radius: 8px;
@@ -418,7 +418,7 @@ img:hover { transform: scale(1.02); }
 
 /* 📬 Contact Strip */
 .contact-strip {
-  background: #1e627a; /* Navy Blue */
+  background: #0a0613; /* Navy Blue */
   color: #fafbfc;
   padding: 50px 20px;
   text-align: center;
@@ -430,11 +430,11 @@ img:hover { transform: scale(1.02); }
   text-decoration: none;
   transition: color 0.3s;
 }
-.contact-strip a:hover { color: #FFD700; text-decoration: underline; }
+.contact-strip a:hover { color: #1e627a; text-decoration: underline; }
 
 /* 🔗 Social Links */
 .social-links a { color: #ffffff; margin: 0 10px; transition: color 0.3s; }
-.social-links a:hover { color: #d6e1e9; }
+.social-links a:hover { color: #1e627a; }
 
 /* 📱 Responsive */
 @media (max-width: 768px) {
