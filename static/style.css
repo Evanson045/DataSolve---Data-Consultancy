@@ -49,7 +49,7 @@ img:hover { transform: scale(1.02); }
   font-weight: 600;
   transition: color 0.3s ease;
 }
-.navbar a:hover { color: #d6e1e9; }
+.navbar a:hover { color: #4a55e6; }
 
 /* 🔝 Hero Section */
 .hero-section {
@@ -73,7 +73,7 @@ img:hover { transform: scale(1.02); }
   font-weight: bold;
   transition: background 0.3s, transform 0.3s;
 }
-.cta-button:hover { background: #dfe4e6; transform: translateY(-2px); }
+.cta-button:hover { background: #4a55e6; transform: translateY(-2px); }
 
 /* 📖 Section Titles */
 .section-title {
@@ -139,7 +139,6 @@ img:hover { transform: scale(1.02); }
   background: #5bbce6;
 }
 
-
 /* 💬 Testimonials */
 .testimonials-section { background: #d6e1e9; padding: 70px 20px; text-align: center; }
 .testimonials-section blockquote {
@@ -166,7 +165,6 @@ img:hover { transform: scale(1.02); }
   transform: scale(1.05); /* slight zoom on hover */
   box-shadow: 0 6px 18px rgba(0,0,0,0.3); /* stronger shadow */
 }
-
 
 /* ❓ FAQ */
 .faq-section { background: #d6e1e9; padding: 70px 20px; }
@@ -206,11 +204,11 @@ img:hover { transform: scale(1.02); }
   text-decoration: none;
   transition: color 0.3s;
 }
-.contact-strip a:hover { color: #d6e1e9; text-decoration: underline; }
+.contact-strip a:hover { color: #4a55e6; text-decoration: underline; }
 
 /* 🔗 Social Links */
 .social-links a { color: #3A6EA5; margin: 0 10px; transition: color 0.3s; }
-.social-links a:hover { color: #d6e1e9; }
+.social-links a:hover { color: #4a55e6; }
 
 /* 📱 Responsive */
 @media (max-width: 768px) {
@@ -365,7 +363,7 @@ img:hover { transform: scale(1.02); }
   gap: 20px;
 }
 .portfolio-item {
-  background: #001f3f; /* Navy blue boxes */
+  background: #008080; /* Navy blue boxes */
   color: #d6e1e9;      /* Light text inside boxes */
   padding: 30px;
   border-radius: 8px;
@@ -377,7 +375,6 @@ img:hover { transform: scale(1.02); }
   transform: translateY(-6px);
   box-shadow: 0 8px 16px rgba(0,0,0,0.25);
 }
-
 
 /* 💬 Testimonials */
 .testimonials-section { background: #d6e1e9; padding: 70px 20px; text-align: center; }
@@ -421,22 +418,22 @@ img:hover { transform: scale(1.02); }
 
 /* 📬 Contact Strip */
 .contact-strip {
-  background: #001f3f; /* Navy Blue */
-  color: #d6e1e9;
+  background: #1e627a; /* Navy Blue */
+  color: #fafbfc;
   padding: 50px 20px;
   text-align: center;
 }
 .contact-strip h2 { font-size: 2rem; margin-bottom: 20px; }
 .contact-strip a {
-  color: #3A6EA5;
+  color: #ffffff;
   font-weight: bold;
   text-decoration: none;
   transition: color 0.3s;
 }
-.contact-strip a:hover { color: #d6e1e9; text-decoration: underline; }
+.contact-strip a:hover { color: #FFD700; text-decoration: underline; }
 
 /* 🔗 Social Links */
-.social-links a { color: #3A6EA5; margin: 0 10px; transition: color 0.3s; }
+.social-links a { color: #ffffff; margin: 0 10px; transition: color 0.3s; }
 .social-links a:hover { color: #d6e1e9; }
 
 /* 📱 Responsive */
