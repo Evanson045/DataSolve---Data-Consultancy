@@ -353,7 +353,7 @@ img:hover { transform: scale(1.02); }
 
 /* 🎨 Portfolio */
 .portfolio-section {
-  background: #87CEEB; /* Sky blue background */
+  background: #d6e1e9; /* Bright background */
   color: #0a0613;      /* Dark text for section headings */
   padding: 70px 20px;
 }
@@ -363,7 +363,7 @@ img:hover { transform: scale(1.02); }
   gap: 20px;
 }
 .portfolio-item {
-  background: #1e627a; /* Navy blue boxes */
+  background: #001f3f; /* Navy blue boxes */
   color: #d6e1e9;      /* Light text inside boxes */
   padding: 30px;
   border-radius: 8px;
