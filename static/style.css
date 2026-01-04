@@ -351,30 +351,74 @@ img:hover { transform: scale(1.02); }
   box-shadow: 0 8px 16px rgba(0,0,0,0.2); 
 }
 
-/* 🎨 Portfolio */
+/* Portfolio Section */
 .portfolio-section {
-  background: #d6e1e9; /* Bright background */
-  color: #0a0613;      /* Dark text for section headings */
-  padding: 70px 20px;
-}
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-.portfolio-item {
-  background: #072e58; /* Navy blue boxes */
-  color: #d6e1e9;      /* Light text inside boxes */
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-  transition: transform 0.3s, box-shadow 0.3s;
+  background: linear-gradient(135deg, #d6e1e9, #f4f7fa); /* Soft gradient background */
+  color: #0a0613;      
+  padding: 80px 30px;
   text-align: center;
 }
-.portfolio-item:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+
+/* Grid Layout */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
 }
+
+/* Portfolio Section */
+.portfolio-section {
+  background: linear-gradient(135deg, #d6e1e9, #f4f7fa);
+  color: #0a0613;
+  padding: 80px 30px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #072e58;
+}
+
+/* Grid Layout */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* Portfolio Item */
+.portfolio-item {
+  background: linear-gradient(145deg, #072e58, #0a3a6e);
+  color: #d6e1e9;
+  padding: 40px 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  text-align: center;
+  cursor: pointer;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+}
+
+.portfolio-item h3 {
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.portfolio-item p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #d6e1e9;
+}
+
 
 /* 💬 Testimonials */
 .testimonials-section { background: #d6e1e9; padding: 70px 20px; text-align: center; }
