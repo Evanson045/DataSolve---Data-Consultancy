@@ -110,35 +110,6 @@ img:hover { transform: scale(1.02); }
   color: #000000; /* Black tagline */
 }
 
-/* 🎨 Portfolio */
-.portfolio-section {
-  background: #ffffff !important; /* White background */
-  color: #0a0613;
-  padding: 70px 20px;
-}
-
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-.portfolio-item {
-  background: #03172b !important; /* Force dark navy boxes */
-  color: #d6e1e9;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-  transition: transform 0.3s, box-shadow 0.3s;
-  text-align: center;
-}
-
-.portfolio-item:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.25);
-  background: #03172b !important; /* Keep navy even on hover */
-}
-
 /* 💬 Testimonials */
 .testimonials-section { background: #d6e1e9; padding: 70px 20px; text-align: center; }
 .testimonials-section blockquote {
@@ -353,23 +324,7 @@ img:hover { transform: scale(1.02); }
 
 /* Portfolio Section */
 .portfolio-section {
-  background: linear-gradient(135deg, #d6e1e9, #f4f7fa); /* Soft gradient background */
-  color: #0a0613;      
-  padding: 80px 30px;
-  text-align: center;
-}
-
-/* Grid Layout */
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  margin-top: 40px;
-}
-
-/* Portfolio Section */
-.portfolio-section {
-  background: linear-gradient(135deg, #d6e1e9, #f4f7fa);
+  background: #d6e1e9;   /* Solid light blue background */
   color: #0a0613;
   padding: 80px 30px;
   text-align: center;
@@ -379,7 +334,7 @@ img:hover { transform: scale(1.02); }
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 40px;
-  color: #072e58;
+  color: #072e58;        /* Navy heading for contrast */
 }
 
 /* Grid Layout */
@@ -391,8 +346,8 @@ img:hover { transform: scale(1.02); }
 
 /* Portfolio Item */
 .portfolio-item {
-  background: linear-gradient(145deg, #072e58, #0a3a6e);
-  color: #d6e1e9;
+  background: #072e58;   /* Navy blue boxes */
+  color: #d6e1e9;        /* Light text inside boxes */
   padding: 40px 25px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
@@ -418,7 +373,6 @@ img:hover { transform: scale(1.02); }
   line-height: 1.5;
   color: #d6e1e9;
 }
-
 
 /* 💬 Testimonials */
 .testimonials-section { background: #d6e1e9; padding: 70px 20px; text-align: center; }
