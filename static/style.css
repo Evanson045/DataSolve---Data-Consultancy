@@ -363,7 +363,7 @@ img:hover { transform: scale(1.02); }
   gap: 20px;
 }
 .portfolio-item {
-  background: #001f3f; /* Navy blue boxes */
+  background: #072e58; /* Navy blue boxes */
   color: #d6e1e9;      /* Light text inside boxes */
   padding: 30px;
   border-radius: 8px;
