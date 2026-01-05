@@ -31,25 +31,41 @@ img:hover { transform: scale(1.02); }
   box-shadow: 0 2px 6px rgba(0,0,0,0.15);
   z-index: 1000;
 }
+
 .navbar .nav-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end; /* ✅ push nav links to the right */
   align-items: center;
 }
+
 .navbar ul {
   list-style: none;
   display: flex;
+  flex-wrap: wrap; /* ✅ allows wrapping on smaller screens */
   gap: 20px;
   margin: 0;
   padding: 0;
+  margin-left: auto; /* ✅ ensures links stay aligned right */
 }
+
 .navbar a {
   color: #d6e1e9;
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s ease;
 }
-.navbar a:hover { color: #4a55e6; }
+
+.navbar a:hover { 
+  color: #4a55e6; 
+}
+
+/* 📱 Responsive: center links on very small screens */
+@media (max-width: 600px) {
+  .navbar ul {
+    justify-content: center; /* ✅ center links neatly on mobile */
+    gap: 12px;
+  }
+}
 
 /* 🔝 Hero Section */
 .hero-section {

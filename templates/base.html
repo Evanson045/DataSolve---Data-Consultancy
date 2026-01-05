@@ -34,10 +34,7 @@
   <!-- Navigation -->
   <nav class="navbar" aria-label="Main Navigation">
     <div class="nav-container">
-      <!-- Hamburger button -->
-      <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation menu">☰</button>
-
-      <!-- Navigation links (single-page anchors) -->
+      <!-- Navigation links (always visible, right-aligned) -->
       <ul id="nav-links">
         <li><a href="#hero" class="active">Home</a></li>
         <li><a href="#about">About</a></li>
@@ -54,13 +51,5 @@
 
   <!-- Page-specific content -->
   {% block content %}{% endblock %}
-
-  <!-- JS toggle -->
-  <script>
-    function toggleMenu() {
-      const navLinks = document.getElementById("nav-links");
-      navLinks.classList.toggle("show");
-    }
-  </script>
 </body>
 </html>
