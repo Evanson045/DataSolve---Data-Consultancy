@@ -412,7 +412,7 @@ img:hover { transform: scale(1.02); }
 /* 📬 Contact Strip */
 .contact-strip {
   background: #001f3f; /* Navy Blue */
-  color: #12c5dd;
+  color: #ffffff;
   padding: 50px 20px;
   text-align: center;
 }
