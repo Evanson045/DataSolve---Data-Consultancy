@@ -22,47 +22,38 @@ img {
 }
 img:hover { transform: scale(1.02); }
 
-/* 📌 Sticky Navigation */
+/* 📌 Simplified Navigation (below hero) */
 .navbar {
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  background: #001f3f; /* Navy Blue */
-  padding: 12px 20px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-  z-index: 1000;
+  background: transparent;   /* blends with hero background */
+  margin-top: 20px;          /* spacing below tagline */
+  position: relative;        /* no fixed sticky bar */
+  box-shadow: none;          /* remove shadow */
 }
 
-.navbar .nav-container {
-  display: flex;
-  justify-content: flex-end; /* ✅ push nav links to the right */
-  align-items: center;
-}
-
-.navbar ul {
+#nav-links {
   list-style: none;
   display: flex;
-  flex-wrap: wrap; /* ✅ allows wrapping on smaller screens */
-  gap: 20px;
+  justify-content: center;   /* center below logo/tagline */
+  gap: 30px;
   margin: 0;
   padding: 0;
-  margin-left: auto; /* ✅ ensures links stay aligned right */
 }
 
-.navbar a {
-  color: #d6e1e9;
+#nav-links li a {
   text-decoration: none;
+  color: #d6e1e9;            /* matches hero text color */
   font-weight: 600;
   transition: color 0.3s ease;
 }
 
-.navbar a:hover { 
-  color: #4a55e6; 
+#nav-links li a:hover {
+  color: #4a55e6;
 }
 
-/* 📱 Responsive: center links on very small screens */
+/* 📱 Responsive: stack neatly on very small screens */
 @media (max-width: 600px) {
-  .navbar ul {
-    justify-content: center; /* ✅ center links neatly on mobile */
+  #nav-links {
+    flex-direction: column;
     gap: 12px;
   }
 }
