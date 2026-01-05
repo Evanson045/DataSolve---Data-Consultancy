@@ -50,11 +50,10 @@ img:hover { transform: scale(1.02); }
   color: #4a55e6;
 }
 
-/* 📱 Responsive: stack neatly on very small screens */
-@media (max-width: 600px) {
-  #nav-links {
-    flex-direction: column;
-    gap: 12px;
+/* 📱 Responsive: keep links horizontal on mobile */ 
+@media (max-width: 600px) { #nav-links { flex-direction: row; /* ✅ force horizontal layout  */ 
+  flex-wrap: wrap; /* ✅ allow wrapping if screen is too narrow */ 
+  gap: 15px; /* smaller spacing for mobile */
   }
 }
 
