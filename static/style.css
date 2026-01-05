@@ -434,7 +434,7 @@ img:hover { transform: scale(1.02); }
   text-decoration: none;
   transition: color 0.3s;
 }
-.contact-strip a:hover { color: #12c5dd; text-decoration: underline; }
+.contact-strip a:hover { color: #4a55e6; text-decoration: underline; }
 
 /* 🔗 Social Links */
 .social-links a { color: #ffffff; margin: 0 10px; transition: color 0.3s; }
