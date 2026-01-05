@@ -1,17 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>DataSolve Consultancy | Data Analytics & Web Solutions</title>
+  <!-- General SEO -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DataSolve – Data Consultancy | Courses, Dashboards, Web Solutions</title>
+  <meta name="description" content="DataSolve empowers growth with data-driven courses, interactive dashboards, and responsive web solutions. Learn, analyze, and build with clarity and impact.">
+  <meta name="keywords" content="Datasolve, data consultancy, Free R programming courses, interactive dashboards, website, data analysis, DataSolve, data-driven">
+
+  <!-- Free Courses (R Programming) -->
+  <meta name="title" content="Free R Programming Courses | DataSolve">
+  <meta name="description" content="Master R programming with guided modules covering fundamentals, data analysis, and visualization essentials.">
+
+  <!-- Dashboards -->
+  <meta name="title" content="Interactive Business Dashboards | DataSolve Analytics">
+  <meta name="description" content="Explore DataSolve’s interactive dashboards with modular analytics and clean UI. Delivering actionable insights for smarter business decision-making and workflow optimization.">
+
+  <!-- Web Solutions -->
+  <meta name="title" content="Responsive Web Solutions | DataSolve">
+  <meta name="description" content="Discover DataSolve’s responsive web applications designed for scalability, branding, and premium user experience. Optimized for performance and data-driven workflows.">
+
+  <!-- Social Sharing (Open Graph) -->
+  <meta property="og:title" content="DataSolve – Data Consultancy">
+  <meta property="og:description" content="Data-driven courses, dashboards, and web solutions designed for clarity, scalability, and impact.">
+  <meta property="og:image" content="{{ url_for('static', filename='datasolve_logo.png') }}">
+  <meta property="og:url" content="https://datasolve-data-consultancy.onrender.com/">
+  <meta property="og:type" content="website">
+
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
   <!-- Navigation -->
-  <nav class="navbar">
+  <nav class="navbar" aria-label="Main Navigation">
     <div class="nav-container">
       <!-- Hamburger button -->
-      <button class="hamburger" onclick="toggleMenu()">☰</button>
+      <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation menu">☰</button>
 
       <!-- Navigation links (single-page anchors) -->
       <ul id="nav-links">
