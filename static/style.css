@@ -412,13 +412,13 @@ img:hover { transform: scale(1.02); }
 /* 📬 Contact Strip */
 .contact-strip {
   background: #001f3f; /* Navy Blue */
-  color: #fafbfc;
+  color: #12c5dd;
   padding: 50px 20px;
   text-align: center;
 }
 .contact-strip h2 { font-size: 2rem; margin-bottom: 20px; }
 .contact-strip a {
-  color: #ffffff;
+  color: #12c5dd;
   font-weight: bold;
   text-decoration: none;
   transition: color 0.3s;
@@ -426,8 +426,8 @@ img:hover { transform: scale(1.02); }
 .contact-strip a:hover { color: #4a55e6; text-decoration: underline; }
 
 /* 🔗 Social Links */
-.social-links a { color: #ffffff; margin: 0 10px; transition: color 0.3s; }
-.social-links a:hover { color: #12c5dd; }
+.social-links a { color: #12c5dd; margin: 0 10px; transition: color 0.3s; }
+.social-links a:hover { color: #4a55e6; }
 /* 📱 Responsive */
 @media (max-width: 768px) {
   .main-title { font-size: 2rem; }
