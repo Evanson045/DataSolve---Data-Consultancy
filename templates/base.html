@@ -4,29 +4,35 @@
   <!-- General SEO -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DataSolve – Data Consultancy | Courses, Dashboards, Web Solutions</title>
-  <meta name="description" content="DataSolve empowers growth with data-driven courses, interactive dashboards, and responsive web solutions. Learn, analyze, and build with clarity and impact.">
-  <meta name="keywords" content="Datasolve, data consultancy, Free R programming courses, interactive dashboards, website, data analysis, DataSolve, data-driven">
-
-  <!-- Social Sharing (Open Graph) -->
-  <meta property="og:title" content="DataSolve – Data Consultancy">
-  <meta property="og:description" content="Data-driven courses, dashboards, and web solutions designed for clarity, scalability, and impact.">
-  <meta property="og:image" content="{{ url_for('static', filename='datasolve_logo.png') }}">
-  <meta property="og:url" content="https://datasolve-data-consultancy.onrender.com/">
-  <meta property="og:type" content="website">
-
-  <!-- Stylesheet -->
+  <title>DataSolve – Data Consultancy</title>
+  <meta name="description" content="DataSolve empowers growth with data courses, dashboards, and web solutions.">
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-  <!-- Simplified Navigation (no duplicate hero) -->
-  <nav class="navbar" aria-label="Main Navigation">
-    <ul id="nav-links">
-      <li><a href="#hero" class="active">Home</a></li>
-      <li><a href="#services">Our Services</a></li>
-      <li><a href="#contact">Contact Us</a></li>
-    </ul>
-  </nav>
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section">
+    <div class="container text-center">
+      <!-- Logo -->
+      <img src="{{ url_for('static', filename='datasolve_logo.png') }}" 
+           alt="DataSolve logo" class="logo">
+
+      <!-- Company Name -->
+      <h1 class="main-title">DataSolve – Data Consultancy</h1>
+
+      <!-- Tagline -->
+      <p class="tagline">Empowering growth with learning, technology, and business solutions.</p>
+
+      <!-- Simplified Navigation -->
+<nav class="navbar" aria-label="Main Navigation">
+  <ul id="nav-links">
+    <li><a href="#hero" class="active">Home</a></li>
+    <li><a href="#services">Our Services</a></li>
+    <li><a href="#contact">Contact Us</a></li>
+  </ul>
+</nav>
+
+    </div>
+  </section>
 
   <!-- Page-specific content -->
   {% block content %}{% endblock %}

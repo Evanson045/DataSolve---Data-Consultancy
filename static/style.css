@@ -22,64 +22,53 @@ img {
 }
 img:hover { transform: scale(1.02); }
 
-/* 📌 Simplified Navigation (below hero) */
-.navbar {
-  background: transparent;   /* blends with hero background */
-  margin-top: 20px;          /* spacing below tagline */
-  position: relative;        /* no fixed sticky bar */
-  box-shadow: none;          /* remove shadow */
-}
-
-#nav-links {
-  list-style: none;
-  display: flex;
-  justify-content: center;   /* center below logo/tagline */
-  gap: 30px;
-  margin: 0;
-  padding: 0;
-}
-
-#nav-links li a {
-  text-decoration: none;
-  color: #d6e1e9;            /* matches hero text color */
-  font-weight: 600;
-  transition: color 0.3s ease;
-}
-
-#nav-links li a:hover {
-  color: #4a55e6;
-}
-
-/* 📱 Responsive: keep links horizontal on mobile */ 
-@media (max-width: 600px) { #nav-links { flex-direction: row; /* ✅ force horizontal layout  */ 
-  flex-wrap: wrap; /* ✅ allow wrapping if screen is too narrow */ 
-  gap: 15px; /* smaller spacing for mobile */
-  }
-}
-
 /* 🔝 Hero Section */
 .hero-section {
   background-color: #001f3f; /* Navy Blue */
   color: #d6e1e9;
-  padding: 100px 20px;
+  padding: 80px 20px;
   text-align: center;
-  margin-top: 60px; /* offset for sticky nav */
 }
-.logo { max-width: 160px; margin-bottom: 20px; transition: transform 0.3s; }
+.logo { max-width: 160px; margin-bottom: 20px; transition: transform 0.3s ease; }
 .logo:hover { transform: scale(1.05); }
-.main-title { font-size: 2.8rem; color: #d6e1e9; margin: 15px 0; font-weight: 700; }
+.main-title { font-size: 2.8rem; margin: 15px 0; font-weight: 700; }
 .tagline { font-size: 1.3rem; color: #bbc7cf; margin-bottom: 25px; }
-.cta-button {
-  display: inline-block;
-  background: #3A6EA5;
-  color: #d6e1e9;
-  padding: 14px 28px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s, transform 0.3s;
+
+/* ✅ Simplified nav below hero */
+.navbar {
+  background: transparent;
+  margin-top: 20px;
+  position: relative;
+  box-shadow: none;
 }
-.cta-button:hover { background: #4a55e6; transform: translateY(-2px); }
+#nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+#nav-links li a {
+  text-decoration: none;
+  color: #d6e1e9;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+#nav-links li a:hover { color: #4a55e6; }
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .main-title { font-size: 2rem; }
+  .tagline { font-size: 1rem; }
+}
+@media (max-width: 600px) {
+  #nav-links {
+    flex-direction: row;   /* keep horizontal */
+    flex-wrap: wrap;       /* wrap if too narrow */
+    gap: 15px;
+  }
+}
 
 /* 📖 Section Titles */
 .section-title {

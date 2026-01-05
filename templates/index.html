@@ -1,26 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
 
-<!-- Hero -->
-<section id="hero" class="hero-section">
-  <div class="container text-center">
-    <img src="{{ url_for('static', filename='datasolve_logo.png') }}" alt="DataSolve data consultancy logo" class="logo">
-    <h1 class="main-title">DataSolve – Data Consultancy</h1>
-    <p class="tagline">Empowering growth with learning, technology, and business solutions.</p>
-
-    <!-- Simplified Navigation directly below logo + tagline -->
-    <nav class="navbar" aria-label="Main Navigation">
-      <ul id="nav-links">
-        <li><a href="#hero" class="active">Home</a></li>
-        <li><a href="#services">Our Services</a></li>
-        <li><a href="#contact">Contact Us</a></li>
-      </ul>
-    </nav>
-
-    <a href="#contact" class="cta-button">Contact Us</a>
-  </div>
-</section>
-
 <!-- About Us -->
 <section id="about" class="about-section">
   <div class="container grid-3">
@@ -41,80 +21,63 @@
 
 <!-- Services -->
 <section id="services" class="services-section">
-  <div class="top-section">
-    <div class="container text-center">
-      <h1 class="main-title">Our Services</h1>
-      <p class="tagline">Delivering learning, technology, and business solutions — all powered by actionable data insights.</p>
-    </div>
+  <div class="container text-center">
+    <h1 class="main-title">Our Services</h1>
+    <p class="tagline">Learning, technology, and business solutions powered by actionable data insights.</p>
   </div>
 </section>
-
-<!-- Testimonials -->
 <section id="testimonials" class="testimonials-section">
-  <div class="container">
-    <blockquote>
-      “DataSolve has made me better understand and comprehend the use of R studio. Through the in-person and online sessions, I have become more comfortable with R due to DataSolve's simplified and useful teaching. Highly recommend DataSolve to both beginners and skilled users of R.”  
-      – Chantal Ciera
-    </blockquote>
-  </div>
+  <h2 class="section-title">What Our Clients Say</h2>
+ <blockquote> “DataSolve made me better understand and comprehend the use of R studio. Through the in-person and online sessions, I have come to become more comfortable with the use of R due to DataSolve's simplified and useful teaching. Would highly recommend DataSolve to both beginners and skilled users of R, as they will benefit from the lessons.”- Chantal Ciera </blockquote>
 </section>
 
 <!-- Portfolio -->
 <section id="portfolio" class="portfolio-section">
   <h2 class="section-title">Portfolio</h2>
   <div class="portfolio-grid">
+    
+    <!-- Free Courses -->
     <div class="portfolio-item">
       <h3>Free Courses</h3>
-      <p>Master R programming with guided modules covering fundamentals, data analysis, and visualization essentials.</p>
-      <a href="/courses/r-programming" class="cta-button">Start Free R Courses</a>
+      <p>Learn the language of data — free courses in R, Statistics, and Data Science.</p>
+      <a href="https://canvas.instructure.com/" target="_blank" class="cta-button">
+        Start Free R Courses
+      </a>
     </div>
+    
+    <!-- Dashboards -->
     <div class="portfolio-item">
       <h3>Dashboards</h3>
-      <p>Explore DataSolve’s interactive dashboards built with modular analytics and clean UI. Delivering actionable insights for smarter business decision‑making.</p>
-      <a href="/portfolio/dashboards" class="cta-button">View Dashboards</a>
+      <p>Explore DataSolve’s interactive dashboards built with modular analytics and clean UI.</p>
+      <a href="https://rpubs.com/Evanson254/1338696" target="_blank" class="cta-button">
+        View Dashboards
+      </a>
     </div>
+    
+    <!-- Web Solutions -->
     <div class="portfolio-item">
       <h3>Web Solutions</h3>
-      <p>Discover DataSolve’s responsive web applications designed for scalability, branding, and premium user experience. Optimized for performance and data-driven workflows.</p>
-      <a href="/portfolio/web-solutions" class="cta-button">Explore Web Solutions</a>
+      <p>Responsive web applications designed for scalability, branding, and premium user experience.</p>
+      <a href="/portfolio/web-solutions" class="cta-button">The DataSolve Website</a>
     </div>
+    
   </div>
 </section>
 
-<!-- Our Team -->
-<section id="team" class="team-section">
+<!-- Founder -->
+<section id="founder" class="team-section">
   <div class="container text-center">
+    <h2 class="section-title">Meet the Founder</h2>
     <img src="{{ url_for('static', filename='founder.png') }}" 
-         alt="Evanson Mwangi, Founder of DataSolve" 
+         alt="Evanson Mwangi – Founder of DataSolve" 
          class="team-photo">
-    <h3>Evanson Mwangi – Founder</h3>
-    <p>Passionate about delivering scalable, data-driven solutions with measurable impact.</p>
-    <a href="https://www.linkedin.com/in/mwangievanson" target="_blank" class="cta-button">
-      Connect on LinkedIn
-    </a>
+    <h3>Evanson Mwangi</h3>
+    <p>Founder of DataSolve, data analyst, educator, and emerging AI/web contributor. 
+       Evanson specializes in modular analytics, educational content creation, workflow optimization, and branding. 
+       His vision is to empower businesses and learners with clarity, reproducibility, and actionable insights.</p>
   </div>
 </section>
 
-<!-- FAQ -->
-<section id="faq" class="faq-section">
-  <div class="container">
-    <h2 class="section-title">Frequently Asked Questions</h2>
-    <div class="faq-item"><strong>i. What industries do you serve?</strong><br>Finance, education, and tech startups.</div>
-    <div class="faq-item"><strong>ii. Do you offer training?</strong><br>Yes, modular tutorials and workshops.</div>
-  </div>
-</section>
-
-<!-- Newsletter -->
-<section id="newsletter" class="newsletter-section">
-  <div class="container text-center">
-    <h2 class="section-title">Get Our Newsletter</h2>
-    <form action="/subscribe" method="POST">
-      <input type="email" name="email" placeholder="Enter your email" required>
-      <button type="submit" class="cta-button">Subscribe</button>
-    </form>
-    <p>Stay updated with insights and tutorials. No spam, just value.</p>
-  </div>
-</section>
 
 <!-- Contact Us -->
 <section id="contact" class="contact-strip">
