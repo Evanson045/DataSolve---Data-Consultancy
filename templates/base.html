@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DataSolve – Data Consultancy</title>
   <meta name="description" content="DataSolve empowers growth with data courses, dashboards, and web solutions.">
+
+  <!-- Styles -->
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
@@ -22,19 +24,30 @@
       <!-- Tagline -->
       <p class="tagline">Empowering growth through data, technology, and branding.</p>
 
-      <!-- Simplified Navigation -->
-<nav class="navbar" aria-label="Main Navigation">
-  <ul id="nav-links">
-    <li><a href="#hero" class="active">Home</a></li>
-    <li><a href="#services">Our Services</a></li>
-    <li><a href="#contact">Contact Us</a></li>
-  </ul>
-</nav>
-
+      <!-- Navigation -->
+      <nav class="navbar" aria-label="Main Navigation">
+        <ul id="nav-links">
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#services">Our Services</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </nav>
     </div>
   </section>
 
   <!-- Page-specific content -->
   {% block content %}{% endblock %}
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container text-center">
+      <p>&copy; {{ current_year }} DataSolve. All rights reserved.</p>
+      <div class="social-links">
+        <a href="mailto:datasolveke@gmail.com" class="email-link">Email</a> |
+        <a href="https://wa.me/254726572187" target="_blank" class="email-link">WhatsApp</a> |
+        <a href="https://www.linkedin.com/in/mwangievanson" target="_blank" class="email-link">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
